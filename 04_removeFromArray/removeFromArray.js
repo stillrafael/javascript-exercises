@@ -6,7 +6,8 @@ const removeFromArray = function(objectSequence, ...toRemove) {
       
         where = objectSequence.indexOf(toRemove[counter])
         if (where == -1){
-            break
+            counter++
+            continue
         }
         objectSequence.splice(where, 1)
         counter++
